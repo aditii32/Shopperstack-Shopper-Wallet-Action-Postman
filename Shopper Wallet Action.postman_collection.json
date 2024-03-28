@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "13d5cb15-7e9d-4814-b534-e27121036445",
+		"name": "Shopper Wallet Action",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643733",
+		"_collection_link": "https://www.postman.com/spacecraft-specialist-7984735/workspace/shopperstack/collection/33643733-13d5cb15-7e9d-4814-b534-e27121036445?action=share&source=collection_link&creator=33643733"
+	},
+	"item": [
+		{
+			"name": "Get all Wallet Transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWTtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}shoppers/{{shopperId}}/wallets",
+					"host": [
+						"{{BaseUrl}}shoppers"
+					],
+					"path": [
+						"{{shopperId}}",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
